@@ -1,0 +1,75 @@
+/*高度会因为滚动而出现显示问题*/
+#showBox-showUp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+}
+
+#showBox-box {
+    /*Chrome,Firefox, Safari, Mobile Safari, IE8-10.*/
+    margin: auto;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: white;
+    /* justify-content: center; !*子元素水平居中*!
+     align-items: center; !*子元素垂直居中*!
+     display: -webkit-flex;*/
+}
+
+.showBox-picShow {
+    position: relative;
+}
+.showBox-picShow-prev,
+.showBox-picShow-next{
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+.showBox-picShow-prev:hover,
+.showBox-picShow-next:hover{
+    opacity: 1;
+    
+}
+.showBox-picShow-prev{
+    left: 0;
+}
+.showBox-picShow-next{
+    right: 0;
+}
+#showBox-box-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#showBox-alt {
+    position: absolute;
+    left: 10px;
+    bottom: 0;
+    width: calc(100% - 20px);
+    background:-moz-linear-gradient(top, red, rgba(0, 0, 255, 0.5));
+    background:-webkit-gradient(linear, 0 0, 0 bottom, from(rgba(0,0,0,0)), to(rgba(0, 0, 0, 1)));
+}
+#showBox-alt p{
+    padding-left: 20px;
+    color: white;
+}
+
+

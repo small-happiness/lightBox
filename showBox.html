@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片浏览</title>
+    <link rel="stylesheet" href="css/showBox.css" class="ref">
+    <script src="js/jquery-2.0.3.js"></script>
+    <script src="js/showBox.js"></script>
+</head>
+<style>
+    #test {
+        width: 100%;
+        /*height: 2000px;*/
+    }
+    #test p{
+        line-height: 2;
+    }
+</style>
+<!--插件页面控制样式-->
+<style>
+    #showBox ul,
+    #showBox li {
+        margin: 0;
+        padding: 0
+    }
+
+    #showBox ul {
+        display: inline-block;
+        background-color: #9acfea;
+        overflow: auto;
+        border-radius: 10px;
+    }
+
+    #showBox li {
+        list-style: none;
+        float: left;
+        margin: 10px;
+        width: 100px;
+        height: 100px;
+        cursor: pointer;
+    }
+    #showBox li img{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+<div id="test">
+    <p>点击图片，展示效果</p>
+    <!--user tags-->
+    <div id="showBox">
+        <ul>
+            <li><img src="photos/image1.jpg" alt="花朵" title="t1"></li>
+            <li><img src="photos/image2.jpg" alt="枫叶" title="t2"></li>
+            <li><img src="photos/image3.jpg" alt="芦荟" title="t3"></li>
+            <li><img src="photos/image4.jpg" alt="绿叶子1" title="t4"></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<div id="showBox-showUp">
+</div>
+<div id="showBox-box">
+    <div class="showBox-picShow">
+        <div class="showBox-picShow-pic">
+            <img src="photos/image1.jpg" alt="">
+        </div>
+        <div class="showBox-picShow-prev">
+            <img src="images/lightbox-btn-prev.gif" alt="">
+        </div>
+        <div class="showBox-picShow-next">
+            <img src="images/lightbox-btn-next.gif" alt="">
+        </div>
+    </div>
+    <div id="showBox-alt">
+        <p>hahahahahh</p>
+    </div>
+    <div id="showBox-box-close">
+        <span></span>
+        <span></span>
+    </div>
+</div>-->
+</body>
+
+<script>
+    $('#showBox li').showBox();/*
+    $('#showBox li').on('click', function () {
+        console.log(this);
+    })*/
+</script>
+</html>
